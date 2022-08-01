@@ -15,24 +15,27 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CardFormTest {
 
-    WebDriver driver;
+    private WebDriver driver;
 
     @BeforeAll
-    static void setupAll() { WebDriverManager.chromedriver().setup();
+    static void setUpAll() {
+        WebDriverManager.chromedriver().setup();
     }
 
     @BeforeEach
-    void setup() {
+    void setUp() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--no-sandbox");
         options.addArguments("--headless");
         driver = new ChromeDriver(options);
+        driver.get("http://localhost:9999");
     }
 
     @AfterEach
     void tearDown() {
         driver.quit();
+        driver = null;
     }
 
     @Test
