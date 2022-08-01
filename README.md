@@ -1,1 +1,1 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/58erxyjn1h6kw082?svg=true)](https://ci.appveyor.com/project/AbdulovADA/autojava-web-selenium-selenide)
+[![Build status](https://ci.appveyor.com/api/projects/status/ongu67fp3ljm7dgx?svg=true)](https://ci.appveyor.com/project/AbdulovADA/autojava-web-selenium-selenide)
