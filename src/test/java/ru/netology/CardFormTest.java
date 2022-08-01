@@ -31,7 +31,7 @@ class CardFormTest {
     }
 
     @AfterEach
-    void teardown() {
+    void tearDown() {
         driver.quit();
     }
 
