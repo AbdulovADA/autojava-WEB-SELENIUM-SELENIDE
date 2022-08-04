@@ -7,7 +7,6 @@ driver/
 chromedriver
 mac
 
-
 ### STS ###
 .apt_generated
 .classpath
