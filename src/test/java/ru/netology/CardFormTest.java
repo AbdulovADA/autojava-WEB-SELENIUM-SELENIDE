@@ -40,12 +40,11 @@ class CardFormTest {
 
     @Test
     void shouldTestOrderForm() {
-        driver.get("http://localhost:9999");
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Иван Кара-Мурза");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79996666666");
-        driver.findElement(By.className("checkbox")).click();
+        driver.findElement(By.cssSelector("[data-test-id = 'agreement']")).click();
         driver.findElement(By.className("button_view_extra")).click();
-        String text = driver.findElement(By.className("paragraph")).getText();
+        String text = driver.findElement(By.cssSelector("[data-test-id='order-success']")).getText();
 
         assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", text.trim());
     }
